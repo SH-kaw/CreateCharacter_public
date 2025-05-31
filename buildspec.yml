@@ -22,5 +22,6 @@ phases:
       - echo "finish build"
 
 artifacts:
+  name: output-code
   files:
     - output/*
