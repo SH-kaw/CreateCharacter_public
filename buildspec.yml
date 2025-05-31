@@ -12,10 +12,10 @@ phases:
   build:
     commands:
       - echo "Start build"
-      - echo "Lambdaコードをzip化する"
+      - echo "Lambdaコードをzip化する。"
       - mkdir -p output
       - zip -r output/lambda.zip lambda_function.py
-      - echo "index.htmlをコピーする"
+      - echo "index.htmlをコピーする。"
       - cp index.html output/
   post_build:
     commands:
