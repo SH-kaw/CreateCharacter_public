@@ -17,8 +17,6 @@ phases:
       - zip -r output/lambda.zip lambda_function.py
       - echo " copy index.html"
       - cp index.html output/
-      - echo " test "
-      - echo " test"
   post_build:
     commands:
       - echo "finish build"
