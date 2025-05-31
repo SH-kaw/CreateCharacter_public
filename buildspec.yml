@@ -13,8 +13,7 @@ phases:
     commands:
       - echo "Start build"
       - echo " zip for lambda"
-      - mkdir -p output
-      - zip output/lambda.zip lambda_function.py
+      - zip lambda.zip lambda_function.py
       - echo " copy index.html"
       - cp index.html output/
   post_build:
@@ -23,4 +22,5 @@ phases:
 
 artifacts:
   files:
-    - output/*
+    - lambda.zip
+    - index.html
