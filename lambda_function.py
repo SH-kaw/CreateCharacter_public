@@ -23,27 +23,27 @@ class create_charactear :
 
         #elementsから属性を選択してresultに追加
         elements_result = random.choices(self.elements)
-        self.result.append("属性="+str(elements_result))
+        self.result.append("element="+str(elements_result))
 
         #strを平均50、標準偏差10の正規分布から出力して端数を切り捨て
         str_result = rng.normal(50,10,1)
         str_result = np.round(str_result).astype(int)
-        self.result.append("筋力="+(str(str_result)))
+        self.result.append("STR="+(str(str_result)))
         
         #intを平均50、標準偏差10の正規分布から出力して端数を切り捨て
         int_result = rng.normal(50,10,1)
         int_result = np.round(int_result).astype(int)
-        self.result.append("知能="+(str(int_result)))
+        self.result.append("INT="+(str(int_result)))
 
         #powを平均50、標準偏差10の正規分布から出力して端数を切り捨て
         pow_result = rng.normal(50,10,1)
         pow_result = np.round(pow_result).astype(int)
-        self.result.append("精神力="+(str(pow_result)))
+        self.result.append("POW="+(str(pow_result)))
 
         #dexを平均50、標準偏差10の正規分布から出力して端数を切り捨て
         dex_result = rng.normal(50,10,1)
         dex_result = np.round(dex_result).astype(int)
-        self.result.append("敏捷性="+(str(dex_result)))
+        self.result.append("DEX="+(str(dex_result)))
 
         #hpを平均50、標準偏差10の正規分布から出力して端数を切り捨て
         hp_result = rng.normal(50,10,1)
@@ -59,27 +59,27 @@ class create_charactear :
         #appを平均50、標準偏差10の正規分布から出力して端数を切り捨て
         app_result = rng.normal(50,10,1)
         app_result = np.round(app_result).astype(int)
-        self.result.append("容姿="+(str(app_result)))
+        self.result.append("APP="+(str(app_result)))
 
         #homeを平均40、標準偏差30の正規分布から出力して端数を切り捨て、幅が大きく-が出るため最低値を1に設定
         home_result = rng.normal(40,30,1)
         home_result = np.round(home_result).astype(int)
         home_result = np.maximum(home_result, 1)
-        self.result.append("家柄="+(str(home_result)))
+        self.result.append("family background="+(str(home_result)))
 
         #性別を男女から選択
         sex_result = random.choice(self.sex)
-        self.result.append("性別="+(str(sex_result)))
+        self.result.append("sex="+(str(sex_result)))
 
         #性別に応じて身長を男=165,女=155の標準偏差10の正規分布から出力して端数を切り捨て
         if sex_result == "男":
             height_result = rng.normal(165,10,1)
             height_result = np.round(height_result).astype(int)
-            self.result.append("身長="+(str(height_result)))
+            self.result.append("height="+(str(height_result)))
         elif sex_result == "女":
             height_result = rng.normal(155,10,1)
             height_result = np.round(height_result).astype(int)
-            self.result.append("身長="+(str(height_result)))
+            self.result.append("height="+(str(height_result)))
     
 
 #lambda用グローバル関数
