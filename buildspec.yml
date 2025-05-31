@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: latest
+    commands:
+      - echo "Start install"
+  pre_build:
+    commands:
+      - echo "Start pre_build"
+  build:
+    commands:
+      - echo "Start build"
+  post_build:
+    commands:
+      - echo "finish build"
+
+artifacts:
+  files:
+    - lambda_function.py
