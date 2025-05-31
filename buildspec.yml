@@ -13,7 +13,6 @@ phases:
     commands:
       - echo "Start build"
       - echo " zip for lambda"
-      - zip lambda.zip lambda_function.py
   post_build:
     commands:
       - echo "finish build"
@@ -21,5 +20,5 @@ phases:
 artifacts:
   name: output-code
   files:
-    - lambda.zip
+    - lambda_function.py
     - index.html
