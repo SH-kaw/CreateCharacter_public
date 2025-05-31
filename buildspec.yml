@@ -15,7 +15,7 @@ phases:
       - echo "Lambdaコードをzip化"
       - mkdir -p output
       - zip -r output/lambda.zip lambda_function.py
-      - echo "index.htmlをコピー"
+      - echo "index.htmlをコピーする"
       - cp index.html output/
   post_build:
     commands:
