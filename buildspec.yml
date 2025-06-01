@@ -12,7 +12,6 @@ phases:
   build:
     commands:
       - echo "Start build"
-      - echo " zip for lambda"
   post_build:
     commands:
       - echo "finish build"
