@@ -4,7 +4,7 @@ import json
 rng = np.random.default_rng()
 
 #キャラクター作成用クラス
-class create_character :
+class CreateCharacter :
     elements = ["火","水","土","木","金"]
     gender = ["男","女"]
     katakana = list("アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ")
@@ -84,7 +84,7 @@ class create_character :
 #lambda用グローバル関数
 def lambda_handler(event, context):
         
-    A = create_character()
+    A = CreateCharacter()
 
     return {
         'statusCode': 200,
