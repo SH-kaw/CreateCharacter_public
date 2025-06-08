@@ -15,7 +15,6 @@ class create_character :
         #""を区切りにkatakanaから3つを選んでリストの要素を結合
         name = "".join(random.choices(self.katakana, k=3))
         
-        #random.choice() は文字列,random.choices() はリスト
         if name.startswith("ン") :
             name = random.choice(self.katakana)+name
         
