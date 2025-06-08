@@ -6,7 +6,7 @@ rng = np.random.default_rng()
 #キャラクター作成用クラス
 class create_charactear :
     elements = ["火","水","土","木","金"]
-    sex = ["男","女"]
+    gender = ["男","女"]
     katakana = list("アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ")
 
     def __init__(self):
@@ -19,7 +19,7 @@ class create_charactear :
         if name.startswith("ン") :
             name = random.choice(self.katakana)+name
         
-        self.result.append("名前="+name)
+        self.result.append("name="+name)
 
         #elementsから属性を選択してresultに追加
         elements_result = random.choices(self.elements)
@@ -68,15 +68,15 @@ class create_charactear :
         self.result.append("family background="+(str(home_result)))
 
         #性別を男女から選択
-        sex_result = random.choice(self.sex)
-        self.result.append("sex="+(str(sex_result)))
+        gender_result = random.choice(self.gender)
+        self.result.append("gender="+(str(gender_result)))
 
         #性別に応じて身長を男=165,女=155の標準偏差10の正規分布から出力して端数を切り捨て
-        if sex_result == "男":
+        if gender_result == "男":
             height_result = rng.normal(165,10,1)
             height_result = np.round(height_result).astype(int)
             self.result.append("height="+(str(height_result)))
-        elif sex_result == "女":
+        elif gender_result == "女":
             height_result = rng.normal(155,10,1)
             height_result = np.round(height_result).astype(int)
             self.result.append("height="+(str(height_result)))
