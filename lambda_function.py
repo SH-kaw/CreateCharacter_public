@@ -85,7 +85,7 @@ class create_character :
 #lambda用グローバル関数
 def lambda_handler(event, context):
         
-    A = create_charactear()
+    A = create_character()
 
     return {
         'statusCode': 200,
