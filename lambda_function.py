@@ -4,7 +4,7 @@ import json
 rng = np.random.default_rng()
 
 #キャラクター作成用クラス
-class create_charactear :
+class create_character :
     elements = ["火","水","土","木","金"]
     gender = ["男","女"]
     katakana = list("アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ")
